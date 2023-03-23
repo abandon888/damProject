@@ -69,14 +69,16 @@ const Home = () => {
             backgroundColor: 'black',
             color: 'white',
           }}>
-          <Menu.Item key="1" style={{fontSize:'24px'}}>logo!</Menu.Item>
-          <Menu.Item key="2">
-            3D Models
+          <Menu.Item key="1" style={{ fontSize: '24px' }}>
+            logo!
           </Menu.Item>
+          <Menu.Item key="2">3D Models</Menu.Item>
           <Menu.Item key="3">
             <Dropdown overlay={menu}>
-              <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-              contact us <DownOutlined />
+              <a
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}>
+                contact us <DownOutlined />
               </a>
             </Dropdown>
           </Menu.Item>
@@ -175,8 +177,22 @@ const Home = () => {
       <Footer style={{ textAlign: 'center' }}>
         Ant Design ©2018 Created by Ant UED
       </Footer>
+      <div className="modelo-wrapper">
+        <div style={{ width: '100%', paddingBottom: '56.25%', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0 }}>
+            <iframe
+              src="https://app.modaiyun.com/embedded/1638806643092013056?viewport=false&autoplay=false&autorotate=false&hideTools=false&showBIM=false&showBBoxSize=false&showKooRender=false&showSettings=false"
+              style={{ width: '100%', height: '100%' }}
+              frameBorder="0"
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
 
-export default Home
+export default Home;

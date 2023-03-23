@@ -1,18 +1,18 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useEffect, useRef } from 'react'
+import './index.css'
 
 const ThreeD = () => {
   const mount = useRef(null)
-  const modelUrl = 'https://raw.githubusercontent.com/abandon888/damProject/master/src/assets/dam_on_the_river/scene.gltf';
-const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-const proxiedUrl = corsProxy + modelUrl;
-
+  //   const modelUrl = 'https://github.com/abandon888/damProject/blob/e37daa6bebbc7c97c6d1738e4e00a3a490af596a/src/assets/dam_on_the_river/scene.gltf';
+  // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+  // const proxiedUrl = corsProxy + modelUrl;
 
   useEffect(() => {
     const loader = new GLTFLoader()
     loader.load(
-      proxiedUrl,
+      '../assets/dam_on_the_river',
       (gltf) => {
         const scene = gltf.scene
         const camera = new THREE.PerspectiveCamera(
@@ -39,7 +39,10 @@ const proxiedUrl = corsProxy + modelUrl;
     )
   }, [])
 
-  return <div ref={mount} id="canvas-container"></div>
+  return (
+  <div ref={mount} id="canvas-container"></div>
+  
+  )
 }
 
 export default ThreeD
