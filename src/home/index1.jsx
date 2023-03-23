@@ -81,6 +81,7 @@ const Home1 = () => {
           <Menu.Item key="1" style={{ fontSize: '24px' }}>
             首页
           </Menu.Item>
+          {/* 跳转实现 */}
           <Link to="3D1">
             <Menu.Item key="2">3D模型页1</Menu.Item>
           </Link>

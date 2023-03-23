@@ -5,14 +5,16 @@ import {
   Route,
   Routes,
   Navigate,
+  BrowserRouter,
 } from 'react-router-dom'
 import ThreeD from './3d'
 import NotFound from './notFound' // added import statement for NotFound component
+import DPage1 from './3dPage1'
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
@@ -20,8 +22,9 @@ function App() {
           element prop
           <Route path="*" element={<NotFound />} /> // changed component prop to
           element prop and added path
+          <Route path="/home/3D1" element={<DPage1 />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   )
 }
