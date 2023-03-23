@@ -10,6 +10,7 @@ import {
 import ThreeD from './3d'
 import NotFound from './notFound' // added import statement for NotFound component
 import DPage1 from './3dPage1'
+import DPage2 from './3dPage2'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" element={<NotFound />} /> // changed component prop to
           element prop and added path
           <Route path="/home/3D1" element={<DPage1 />} />
+          <Route path="/home/3D2" element={<DPage2 />} />
         </Routes>
       </BrowserRouter>
     </div>
