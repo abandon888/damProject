@@ -1,6 +1,11 @@
 import './App.css'
-import Home from './home'
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
+import Home from './home/index1'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from 'react-router-dom'
 import ThreeD from './3d'
 import NotFound from './notFound' // added import statement for NotFound component
 
@@ -11,8 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/3d" element={<ThreeD />} /> // changed component prop to element prop
-          <Route path="*" element={<NotFound />} /> // changed component prop to element prop and added path
+          <Route path="/3d" element={<ThreeD />} /> // changed component prop to
+          element prop
+          <Route path="*" element={<NotFound />} /> // changed component prop to
+          element prop and added path
         </Routes>
       </Router>
     </div>
