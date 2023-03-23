@@ -4,11 +4,15 @@ import { useEffect, useRef } from 'react'
 
 const ThreeD = () => {
   const mount = useRef(null)
+  const modelUrl = 'https://raw.githubusercontent.com/abandon888/damProject/master/src/assets/dam_on_the_river/scene.gltf';
+const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+const proxiedUrl = corsProxy + modelUrl;
+
 
   useEffect(() => {
     const loader = new GLTFLoader()
     loader.load(
-      './assets/scene.gltf',
+      proxiedUrl,
       (gltf) => {
         const scene = gltf.scene
         const camera = new THREE.PerspectiveCamera(
